@@ -11,7 +11,7 @@
 static bus_driver_t* p_bus_driver_list;
 
 /* driver info */
-bus_driver_t bus_driver_info = {"Thanh_Nha", "+84372385670", {0x9F, 0x67, 0x27, 0x1F}, NOT_ON_BUS};
+bus_driver_t bus_driver_info = {"Thanh_Nha", "+84xxxxxxxxx", {0x9F, 0x67, 0x27, 0x1F}, NOT_ON_BUS};
 
 void bus_driver_list_init() {
     p_bus_driver_list = &bus_driver_info;
