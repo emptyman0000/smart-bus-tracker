@@ -19,18 +19,11 @@
 #define GPS_NEO_M8_BAUDRATE         (9600)
 #define GSM_UART_BAUDRATE           (9600)
 
-/* wifi & firebase definition */
-// #define WIFI_SSID_HOME              "Ngoi Nha Bat On"
-// #define WIFI_PASS_HOME              "18222900"
-// #define WIFI_SSID_COMPANY           "EPCB TECH"
-// #define WIFI_PASS_COMPANY           "epcb2020"
-// #define WIFI_SSID_CAFE              "SONG CA PHE"
-// #define WIFI_PASS_CAFE              "123456songcaphe"
-
-#define API_KEY                     "AIzaSyBJDraVuH7Fg08mWsPfylaZYapeUOpSjx0"
-#define DATABASE_URL                "https://fir-demo-96c0a-default-rtdb.firebaseio.com/"
-#define FB_AUTH_EMAIL               "khanhvo260@gmail.com"
-#define FB_AUTH_PASS                "123456"
+/* firebase config definition */
+#define API_KEY                     "YOUR_API_KEY"
+#define DATABASE_URL                "YOUR_DATABASE_URL"
+#define FB_AUTH_EMAIL               "YOUR_FIREBASE_AUTH_EMAIL"
+#define FB_AUTH_PASS                "YOUR_FIREBASE_AUTH_PASS"
 
 /* GPIO BUTTON definition */
 #define BUTTON_IO_PIN 	            (39)
@@ -69,7 +62,7 @@
 #define GSM_TX_PIN                  (17)  
 
 /***************************************
-** @note: Extern void function
+Extern void function
 ***************************************/
 /* peripherals setup */
 extern void peripherals_init();
