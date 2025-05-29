@@ -25,20 +25,25 @@ This project enables real-time tracking and check-in/out of students on a school
 - Speaker + Buzzer + Button
 - Firebase Realtime Database (via WiFi)
 
-## 🔧 Project Structure
+## 🛠️ Project Structure
+
+```text
 src/
 ├── app/
-│ ├── task_display.cpp
-│ ├── app_signal.h
-│ └── ...
+│   ├── task_display.cpp
+│   ├── app_signal.h
+│   ├── ...
 ├── common/
-| ├── bus_driver.c
-| ├── bus_driver.h
-| └── ...
+│   ├── bus_driver.c
+│   ├── bus_driver.h
 ├── driver/
-│ ├── button.cpp / led.cpp / rfid.cpp ...
+│   ├── button.cpp
+│   ├── led.cpp
+│   ├── rfid.cpp
 ├── kernel/
-│ ├── lt_task.cpp / lt_message.cpp ...
+│   ├── lt_task.cpp
+│   ├── lt_message.cpp
+
 
 ## 🚀 Getting Started
 
