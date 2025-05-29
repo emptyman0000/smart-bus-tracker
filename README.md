@@ -32,19 +32,19 @@ src/
 ├── app/
 │   ├── task_display.cpp
 │   ├── app_signal.h
-│   ├── ...
+│   └── ...
 ├── common/
 │   ├── bus_driver.c
-│   ├── bus_driver.h
+│   └── bus_driver.h
 ├── driver/
-│   ├── button.cpp
-│   ├── led.cpp
-│   ├── rfid.cpp
+│   ├── button/...
+│   ├── led/...
+│   └── io_config/...
 ├── kernel/
 │   ├── lt_task.cpp
-│   ├── lt_message.cpp
-
-
+│   └── lt_message.cpp
+|   └── ...
+```
 ## 🚀 Getting Started
 
 1. Clone the repository  
