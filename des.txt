@@ -1,0 +1,5 @@
+esp32-lite_kernel-v1: Port Event-Drive Architecture vào ARDUINO 
+esp32-lite_kernel-v2: Mở rộng thêm chức năng NETWORK ( wif+firebase )
+esp32-lite_kernel-v3: Mở rộng thêm chức năng GPS gửi dữ liệu lên Firebase.
+esp32-lite_kernel-v4: Mở rộng thêm chức năng Debug Console để phục vụ monitoring
+esp32-lite_kernel-v5: Mở rộng thêm chức năng RFID

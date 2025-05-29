@@ -1,0 +1,38 @@
+Ban đầu là khai báo các biến, các port vào ra.
++ Tiếp theo lần lượt sẽ kiểm tra kết nối Wifi của kit ESP32, kiểm tra kết nối
+Firebase – nếu đã kết nối thành công sẽ tiến hành thiết lập các trạng thái ban đầu. Nếu
+chưa kết nối thành công thì sẽ quay về kiểm tra kết nối lại.
++ Sau khi hệ thống đã kết nối Wifi và Firebase thành công thì sẽ tiến hành kiểm
+tra dữ liệu GPS, nếu nhận được tọa độ thì sẽ cập nhật tọa độ lên Firebase. Ngược lại
+nếu chưa nhận được tín hiệu GPS thì sẽ bỏ qua và tiếp tục kiểm tra các điều kiện
+khác.
++ Tiếp tục là kiểm tra quét thẻ RFID của tài xế, nếu như có quét thẻ tài xế thì sẽ
+tiến hành điểm danh tài xế lên xe, hiển thị những thông tin tài xế đó lên màn hình
+TFT và cập nhật dữ liệu lên Firebase. Tiếp tục khi tài xế quét thẻ xuống xe cũng sẽ
+tiến hành thông báo ra màn hình TFT và cập nhật dữ liệu lên Firebase. Đến đây, công
+việc tiếp theo là kiểm tra điều kiện tất cả học sinh đã xuống xe hay chưa, điều kiện
+này đúng hay sai thì phụ thuộc hoàn toàn vào nhánh của học sinh quét thẻ.
++ Nếu như tài xế chưa quẹt thẻ lên xe, sẽ tiến hành kiểm tra quẹt thẻ RFID của học
+sinh. Nếu như học sinh quét thẻ lên xe (đến trường/về nhà) thì sẽ cập nhật thông tin
+học sinh lên xe (đến trường/về nhà) lên màn hình TFT, đồng thời gửi thông tin, thời
+gian lên xe của học sinh đó lên Firebase. Tương tự, khi học sinh quẹt thẻ xuống xe
+(đến trường/về nhà) cũng sẽ tiến hành thông báo ra màn hình TFT, cập nhật dữ liệu
+lên Firebase và gửi tin nhắn cho phụ huynh (con em mình đến trường/về nhà). Sau
+đó sẽ kiểm tra tất cả học sinh đã xuống xe hay chưa – nếu điều kiện này đúng thì khi
+tài xế quét thẻ xuống xe, màn hình TFT sẽ hiển thị không còn học sinh trên xe, tài xế
+được xác nhận đã xuống xe, ngược lại nếu điều kiện này sai thì màn hình TFT sẽ hiển
+thị cảnh báo còn học sinh trên xe, Buzzer kêu báo hiệu.
++ Bên cạnh đó nếu trong trường hợp tài xế chưa quét thẻ xuống xe hay đã quét thẻ
+xuống xe rồi, học sinh vẫn còn trên xe tức là học sinh đó chưa quét thẻ xuống xe –
+đang mắc kẹt trong xe, cần sự giúp đỡ, học sinh ấy sẽ nhấn nút khẩn cấp để gọi cho
+tài xế, nếu gọi thành công sẽ thông báo ra màn hình TFT. Còn nếu không thành công
+thì học sinh ấy sẽ nhấn nút khẩn cấp để gọi tài xế một lần nữa. Nếu lần này gọi thành
+công thì cũng sẽ thông báo ra màn hình TFT. Nhưng ngược lại nếu thất bại thì hệ
+thống sẽ chuyển sang chế độ quẹt thẻ gọi phụ huynh học sinh. Nếu gọi thành công
+cho phụ huynh cũng sẽ thông báo ra màn hình TFT. Còn nếu gọi thất bại thêm lần
+này nữa thì học sinh phải nhấn nút khẩn cấp lại như ban đầu để thực hiện gọi cho tài
+xế rồi phụ huynh lần nữa
+* Đây là mô tả của hệ thống của ta theo lưu đồ giải thuật nhưng đó là khi code tuần tự. 
+Tuy nhiên giờ ta code dùng RTOS lẫn ứng dụng event-driven esp32 nên không thể dùng lưu đồ 
+giải thuật để mô tả hoạt động hệ thống nữa mà phải dùng sequence diagram. Hãy giúp ta design
+ một sequence diagram sử dụng các task và signal để xử lý hệ thống này một cách hợp lý nhất có thể.
