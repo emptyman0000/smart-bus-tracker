@@ -26,9 +26,6 @@ static char date[20];
 
 
 wifi_list_t wifi_list[] = {
-    { "Ngoi Nha Bat On",    "18222900" },
-    { "Emptyvoid",          "15082003" },
-    { "EPCB TECH",          "epcb2020" },
     { "HoaGiay",            "17a17a17a"},
     { "SONG CA PHE",        "123456songcaphe" },
     { "Bamos Coffee",       "bamosxinchao"},
