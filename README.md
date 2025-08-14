@@ -50,7 +50,7 @@ src/
 1. Clone the repository  
    `git clone https://github.com/emptyman0000/smart-bus-tracker.git`
 
-2. Open with PlatformIO or Arduino IDE
+2. Open with PlatformIO
 
 3. Configure `WiFi`, `Firebase`, and `SIM` credentials in `config.h`
 
